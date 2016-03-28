@@ -1,0 +1,19 @@
+{
+  "name": "Chrome Extension iframe Facebook",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Chrome Extension iframe Facebook",
+  "web_accessible_resources": [
+    "*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.twitter.com/ https://*.twimg.com https://*.firebaseio.com https://*.cloudflare.com https://*.bootstrapcdn.com https://*.facebook.net; object-src 'self'",
+
+  "permissions": [
+    "<all_urls>"
+  ],
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["script.js"]
+  }]
+}
